@@ -1,0 +1,535 @@
+
+/* font face */ 
+@font-face {
+    font-family: Eurofurenceregular;
+    src: url(../fonts/euro/eurof55.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato/Lato-Regular.ttf);
+}
+
+/******************* GENERAL ***************************/
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    color: #606060;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height:15px;
+    letter-spacing: 0.48px;
+}
+
+
+body{
+    margin: 0;
+}
+/**********************Layout  ********************************/
+.container {
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.screen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 12%;
+    left: 0;
+    background: rgba(98, 98, 98, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+body.open .screen{
+    opacity: 1;
+    visibility: visible;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ img{
+     width: 100%;
+ }
+
+ /* **************MENU ************************* */
+
+.inside-container{
+  display: flex;
+  justify-content: space-between;
+   padding: 0 10px;
+    height: 80px;  
+}
+
+.menu-icon {
+    display: inherit;
+    align-self: center;
+
+ } 
+
+.top-nav{
+    box-shadow: inset 0 -6px 0 #1e1e1e;
+    background-color: #292929;
+}
+.logo{
+    color: #ffffff;
+    font-family: Eurofurenceregular;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    align-self: center;
+}
+
+.main-nav {
+    margin-top: 82px;
+    position: fixed;
+    right: 0;
+    flex-direction: column;
+    width: 80vw;
+    transform: translate(100%, 0);
+    transition: transform .6s;
+  }
+
+.main-nav-item {
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+    background-color: lightslategray;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 0 #1e1e1e;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.main-nav-item:hover{
+    box-shadow: inset 0 -6px 0 #58c93a ;
+    color: #58c93a;
+   }
+
+   
+  body.open .main-nav {
+      transform: translate(0, 0);
+  }
+ 
+ 
+
+/**************************** posts************************* */
+
+.posts-container{
+    padding: 0px;
+}
+
+.inner-post-container{
+    padding: 0 20px;
+
+}
+/**************************** post item************************* */
+
+.post-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-heading{
+    color: #4f4e4e;
+  font-size:20px;
+  font-weight: 700;
+  line-height:20px;
+  text-transform: uppercase;
+  letter-spacing: 0.84px;
+}
+
+ .post-text{
+margin-bottom:20px;
+} 
+
+.img-one{
+background-image: url("/img/post1.jpg");
+}
+.img-two{
+    background-image: url("/img/post2.jpg");
+
+}
+.img-three{
+    background-image: url("/img/post3.jpg");
+
+}
+
+.post-item .img-one,.img-two,.img-three{
+    margin: 0 20px;
+    background-position: center;
+    background-size: cover;
+    height: 307px;
+}
+
+.inner-post-container button{
+    width: 200px;
+    border: 2px solid #c2c2c2;
+    background-color: #ffffff;
+    color: #c2c1c1;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.48px;
+    border-radius: 125px;
+    margin: 0 0 30px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.inner-post-container button:hover{
+    color: #58c93a;
+    border:2px solid #58c93a;
+    padding-right: 25px;
+}
+
+.inner-post-container button:hover::after{
+    content: " →";
+     color: #58c93a;
+}
+
+
+/*************************** nav pages**************************  */
+.nav-pages{
+    border-top: 1px solid #e1e0e0;
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    color: #818181;
+   font-family: Lato;
+font-size: 18px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.9px;
+}
+.nav-pages div{
+    cursor: pointer;
+    transition:color 0.5s;
+}
+.nav-pages div:hover{
+color:red;
+}
+
+
+/****************************footer ********************* */
+footer.container{
+    background-color: #f8f8f8;
+    text-align: center;
+    height: 315px;
+    box-shadow: inset 0 1px 0 #e1e0e0;
+    display: flex;
+    flex-direction: column; /*  shoud clean margins? */
+}
+
+footer .logo{
+    color: #292929;
+    margin: auto;
+}
+footer p {
+    color: #a6a6a6;
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: "Lato - Regular";
+    font-weight: 400;
+    letter-spacing: 0.39px;
+
+}
+
+footer span{
+    color: #939292;
+font-family: "Lato - Bold";
+font-weight: 700;
+letter-spacing: 0.39px;
+}
+.social-media{ 
+       display: flex;
+      flex-direction: row;
+    justify-content: space-around;
+    width: 230px;
+    height: 42px;
+    margin: auto;
+    cursor: pointer;
+
+}
+.social-media div{
+    background-color: #e5e5e5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media .facebook:hover{
+    background-color: #516fad;
+}
+.social-media .twitter:hover{
+    background-color: #55ACEE;
+}
+.social-media .be:hover{
+    background-color: #125688;
+}
+.social-media .dribble:hover{
+    background-color: #ff6600;
+}
+.facebook img{
+  width: 8px;
+  height: 15px;
+}
+.twitter img{
+  width: 16px;
+  height: 12px;  
+}
+.be img{
+  width: 16px;
+  height: 11px;
+}
+.dribble img{
+  width: 14px;
+  height: 14px;
+}
+
+/**************************The Modal (background) *********************************/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+
+.modal-content h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-content input{
+margin-bottom: 10px;
+}
+
+.modal-content button{
+    width: 50%;
+    margin: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*toggle menu */
+body.open .main-nav {
+    transform: translate(0, 0);
+}
+
+/************************ End Modal************************ */
+
+
+
+     @media(min-width:700px){
+
+        .top-nav{
+            margin-bottom: 84px;
+        }
+
+        .main-nav{
+            display: flex;
+            flex-direction: row;
+            transform: translate(0px , 0px);
+            margin-top: auto;
+            justify-content: flex-end;
+            position: static;
+        }
+
+        /* .main .main-nav-item:hover {
+            box-shadow: inset 0 -6px 0 #58c93a ;
+            color:#58c93a;
+                } */
+        .menu-icon {
+            display: none;
+        }
+        .logo{
+            min-width: 150px;
+            padding-left: 15px;
+        }
+
+        .inside-container{
+            margin: auto;
+            display: flex;
+        }
+
+        .main-nav-item{
+            text-shadow: 0 1px 0 #1e1e1e;
+            color: #ffffff;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            background-color: transparent;
+            width: 130px;
+            border-right: 1px solid #1e1e1e;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+               }
+
+        /* .main-nav:first-child{ */
+            .first{
+                border-left: 1px solid #1e1e1e;
+            }
+    
+
+        .post-item{
+            display: flex;
+           flex-direction: row;
+            margin:0 0  80px 0 ;
+        }
+      
+        .inner-post-container{
+            padding: 0 20px 0 0;
+            height: 307px;
+            display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+        }
+
+        .inner-post-container button {
+            margin: 0;
+        }
+        
+        .post-item .img-one,.img-two,.img-three{
+            width: 100%;
+        }
+
+        .post-heading{
+            
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 23px;/*55px*/
+        margin-block-start: 0em;
+
+        }
+        .post-text{
+            line-height:18px;
+            margin-bottom:14px;/* 44px */
+        }
+
+        .post-btn{
+          margin:auto;
+          padding: 12px;
+        }
+    
+     } 
+
+@media(min-width:980px) {
+    
+    .top-nav{
+        margin-bottom: 0px;
+
+    }
+    .main-nav{
+        height: 130px;
+        align-items: center;
+
+    }
+
+   .main-nav-item{
+    height: 130px;
+    align-items: self-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+   }
+    .inside-container{
+        max-width: 940px; 
+        height: 130px;
+
+    }
+    .container.main{
+        max-width: 980px;
+        border-right: 1px solid #e1e0e0;
+        border-left: 1px solid #e1e0e0; /* How to do to both sides? */
+        padding-top: 80px;
+    }
+
+    .post-item{
+        display: flex;
+       flex-direction: row;
+        margin:0 0  80px 0 ;
+    }
+  
+    .inner-post-container{
+        padding: 0 20px 0 0;
+        height: 307px;
+    }
+    
+    
+    .post-heading{
+        
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 46px;
+
+    }
+    .post-text{
+        height: 114px;
+        font-size: 16px;
+        line-height:20px;
+        margin-bottom:38px;
+    }
+
+  
+   
+
+   
+} 
+

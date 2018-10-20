@@ -1,0 +1,577 @@
+/* @import "tablet.css"  screen and (min-width : 420px);
+@import "desktop.css"  screen and (min-width : 1024px); */
+
+/* font face */ 
+@font-face {
+    font-family: Eurofurenceregular;
+    src: url(../fonts/euro/eurof55.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato/Lato-Regular.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-family: lato, serif;
+    font-size: 16px;
+    color: #606060;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.48px;
+}
+
+
+body{
+    margin: 0;
+}
+/*Layout  */
+.container {
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.screen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    background: rgba(98, 98, 98, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+body.open .screen{
+    opacity: 1;
+    visibility: visible;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;  
+  transition: color .3s;
+}
+
+ a:hover{
+     text-decoration: none;
+     color:#58c93a;
+
+ }
+
+ img{
+     width: 100%;
+ }
+
+.inside-container{
+  display: flex;
+
+}
+
+.top-nav{
+    
+    box-shadow: inset 0 -6px 0 #1e1e1e;
+    background-color: #292929;
+ 
+}
+.logo{
+    color: #ffffff;
+    font-family: Eurofurenceregular;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: -0.8px; 
+    max-width: 372px;
+    margin: auto;
+}
+
+.main-nav{
+display: flex;
+justify-content: flex-end;
+}
+
+
+.main-nav-item {
+    
+    width: 135px;
+text-shadow: 0 1px 0 #1e1e1e;
+color: #ffffff;
+font-size: 16px;
+font-family: Lato;
+font-weight: 700;
+letter-spacing: 0.8px;
+border:1px solid #1d1d1d;/*how to unit????? so 1 px */
+text-align: center;
+justify-content: center;
+text-align: center;
+height: 130px;
+display: flex;
+flex-direction: column;
+cursor: pointer;
+}
+
+.main-nav-item:hover{
+    box-shadow: inset 0 -6px 0 #58c93a ;
+    color: #58c93a;
+
+}
+        
+/* Text style for "." */
+.logo>span{
+    color: #58c93a;   
+   }
+
+   .clicked{ 
+        color: #58c93a;
+        box-shadow: inset 0 -6px 0 #58c93a ;
+    
+   }
+.container.main{
+    max-width: 980px;
+    border-right: 1px solid #e1e0e0;
+    border-left: 1px solid #e1e0e0; /* How to do to both sides? */
+    padding-top: 84px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.inner-post-container{
+    padding: 0 20px 0 34px;
+}
+
+.post-item{
+    display: flex;
+    margin-bottom:5rem;/* 80px*/
+}
+
+.post-heading{
+    color: #4f4e4e;
+  font-family: Lato;
+  font-size: 1.75rem;/*28px*/
+  font-weight: 700;
+  line-height:1.2;/*30px*/
+  text-transform: uppercase;
+  letter-spacing: 0.84px;
+  margin-bottom: 3.4375rem;/*55px*/
+}
+
+.post-text{
+  color: #606060;
+font-family: Lato;
+font-size: 1rem;/*16px*/
+font-weight: 400;
+line-height:1.1;/*20px*/
+letter-spacing: 0.48px;
+margin-bottom:2.75rem;/*44px*/
+}
+
+.post-item img{
+    padding-left: 20px;
+    align-items: flex-start;
+}
+
+
+.inner-post-container button{
+    width: 186px;
+height: 40px;
+border: 2px solid #c2c2c2;
+background-color: #ffffff;
+color: #c2c1c1;
+font-family: Lato;
+font-size:1rem ;/*16px*/
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0.48px;
+border-radius: 125px;
+}
+
+.inner-post-container button:hover{
+    color: #58c93a;
+    border:2px solid #58c93a;
+}
+
+.inner-post-container button:hover::after{
+    content: " →";
+     color: #58c93a
+}
+
+.read-more:hover{
+  color:#58c93a;
+  border: 2px solid #58c93a;
+  cursor: pointer;
+}
+
+.nav-pages{
+    border-top: 1px solid #e1e0e0;/* why not box until the end? */
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    color: #818181;
+   font-family: Lato;
+font-size: 18px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.9px;
+}
+
+footer.container{
+    background-color: #f8f8f8;
+    text-align: center;
+    height: 315px;
+    box-shadow: inset 0 1px 0 #e1e0e0;
+    display: flex;
+    flex-direction: column;  /* I did the same sizes and it look more big?  shoud clean margins? */
+}
+
+footer .logo{
+    color: #292929;
+    margin: auto;
+}
+footer p {
+    color: #a6a6a6;
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: "Lato - Regular";
+    font-weight: 400;
+    letter-spacing: 0.39px;
+
+}
+
+footer span{
+    color: #939292;
+font-family: "Lato - Bold";
+font-weight: 700;
+letter-spacing: 0.39px;
+}
+.social-media{ 
+       display: flex;
+flex-direction: row;
+justify-content: space-around;
+    width: 230px;
+    height: 42px;
+    margin: auto;
+    cursor: pointer;
+
+}
+.social-media div{
+    background-color: #e5e5e5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media div:hover{
+    background-color: #516fad;
+}
+
+.facebook img{
+    width: 8px;
+height: 15px;
+}
+.twitter img{
+  width: 16px;
+height: 12px;  
+}
+
+.be img{
+    width: 16px;
+height: 11px;
+}
+
+.dribble img{
+    width: 14px;
+height: 14px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+
+.modal-content h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-content input{
+margin-bottom: 10px;
+}
+
+.modal-content button{
+    width: 50%;
+    margin: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*toggle menu */
+body.open .main-nav {
+    transform: translate(0, 0);
+}
+
+
+@media(max-width:700px) { 
+   /* posts */
+   html{
+       font-size: 14px;
+   }
+
+   .post-item img{
+       width: 50%;
+       height: auto;
+   }
+    /*menu*/
+    .menu-icon {
+      display: inherit;
+   } 
+   .inside-container{
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo{
+        margin: initial;
+    }
+
+    .menu-icon{
+        align-self: center;
+    }
+    .main-nav {
+        margin-top: 60px;
+        position: fixed;
+        right: 0;
+        flex-direction: column;
+        height: 60vh;
+        width: 80vw;
+        transform: translate(100%, 0);
+        transition: transform .6s;
+    }
+    body.open .main-nav {
+        transform: translate(0, 0);
+    }
+   
+    .main-nav .main-nav-item {
+        padding: 4px 36px;
+        text-align: center;
+        background-color: lightslategray;
+        border:1px solid transparent;
+        margin-bottom: 5px;
+    }
+
+    .main-nav .main-nav-item:hover {
+        background: rgba(98, 98, 98, 0.7);
+        color: #fff;
+    }
+
+    .main-nav-item{
+        width: 80%;;
+    }
+}
+
+    @media(max-width:420px) {   
+        html{
+            font-size:10px;
+        }
+        /* .post-item {
+            width: 100%;
+            height: auto;
+            padding-right: 20px;
+    
+        } */
+        .post-item img{
+            width: 100%;
+        }
+
+        .post-item{
+            width: 100%;
+            padding-right: 20px;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+        }
+    } 
+    
+
+    /* posts*/
+    /* .post-item img{
+        width: 50vw;
+        height: auto;
+    }
+    .post-heading{
+        font-size: 20px;
+    
+    }
+    .post-text{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .inner-post-container{
+        padding: 10px;
+    } */
+
+
+@media(max-width:960px) {
+    html{
+        font-size:16px;
+    }
+    
+    .post-item img{
+        width: 50%;
+    }
+
+   
+} 
+
+
+
+/* @media(max-width:960px) {
+   /* posts*/
+   /* .post-item img{
+    width: 50vw;
+    height: auto;
+} */
+/*}/*/
+
+/* 
+@media(max-width:500px){
+.post-item img{
+padding: 10px;
+height: 50vh;
+width: unset;
+object-fit: cover;
+} 
+
+.post-item{
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.post-heading{
+    padding: 10px;
+font-size: 18px;
+line-height: normal;
+margin-bottom: 2px;
+}
+
+.post-text{
+    margin-bottom: 10px;
+    padding: 0 10px; 
+   }
+   
+   .container.main{
+       padding-top: 10px;
+   }
+}
+*/
+
+/*  
+ @media(max-width:500px){
+    .post-item img{
+    padding: 10px;
+    height: 50vh;
+    width: unset;
+    object-fit: cover;
+    } 
+
+    .post-item{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+     .post-heading{
+        padding: 10px;
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 2px;
+    }
+ 
+    .post-text{
+        margin-bottom: 10px;
+        padding: 0 10px; 
+       }
+       
+       .container.main{
+           padding-top: 10px;
+       }
+    } */ 
+
+    /* @media(min-width:700px){
+
+        .inside-container{
+            max-width: 940px;
+            margin: auto;
+            display: flex;
+        
+        }
+    
+        .menu-icon {
+            display: none;
+        }
+        .inner-post-container{
+            padding: 0 20px 0 34px;
+        }
+        .post-heading{
+            margin-bottom: 55px;
+        }
+        .post-text{
+            margin-bottom: 44px;
+        }
+    
+        .logo{
+            min-width: 150px;
+            padding-left: 10px;
+        }
+       } */
+

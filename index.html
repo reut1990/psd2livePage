@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Design To Live Page</title>
+</head>
+
+<body>
+
+    <div class="screen" onclick="toggleMenu()"></div>
+
+    <section class="top-nav ">
+        <div class="inside-container">
+            <div class="top-nav-logo logo" title="" alt="Blogin">Blogin<span>.</span></div>
+            <nav class="main-nav container" id="main-nav">
+                <a href="#"><div class="main-nav-item first" onclick="cellClick(this)">Journal</div></a>
+                <a href="#"><div class="main-nav-item" onclick="cellClick(this)">About</div></a>
+                <a href="#"><div class="main-nav-item" onclick="cellClick(this)">Work</div></a>
+                <a href="#"><div class="main-nav-item" onclick="cellClick(this)">Contact</div></a>
+            </nav>
+            <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        </div>
+    </section>
+
+    <main class="container main">
+        <ul class="posts-container flex wrap space-around clean-list">
+            <li class="post-item ">
+                <div class="img-one"></div>
+                <div class="inner-post-container">
+                    <h2 class="post-heading">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.<br><br> Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                    </div>
+                    <button id="myBtn" class="post-btn">Continue Reading</button>
+                </div>
+            </li>
+            <li class="post-item">
+                <div class="img-two"></div>
+                <div class="inner-post-container">
+                    <h2 class="post-heading">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.<br><br> Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                    </div>
+                    <button  id="myBtn" class="post-btn">Continue Reading</button>
+                </div>
+            </li>
+            <li class="post-item">
+                <div class="img-three"></div>
+                <div class="inner-post-container">
+                    <h2 class="post-heading">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <div class="post-text">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.<br><br> Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                    </div>
+                    <button  id="myBtn" class="post-btn">Continue Reading</button>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-pages container">
+            <div>← Previous</div>
+            <div>Next →</div>
+        </div>
+    </main>
+    <footer class="container">
+        <h2 class="logo">Blogin<span>.</span></h2>
+        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></p>
+        <div class="social-media">
+            <div class="facebook"><img src="/img/facebook.png" alt ""></div>
+            <div class="twitter"><img src="/img/L.png" alt ""></div>
+            <div class="be"><img src="/img/E.png" alt ""></div>
+            <div class="dribble"><img src="/img/D.png" alt ""></div>
+
+
+        </div>
+
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join us to get access to the latest stories!</h2>
+            <input placeholder="Email">
+            <button>Submit</button>
+        </div>
+
+    </div>
+
+
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+<!--cursor-->
+<!-- .flex-container>.flex-item.flex-item-${$}*5 -->
