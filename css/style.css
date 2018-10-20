@@ -162,14 +162,14 @@ margin-bottom:20px;
 } 
 
 .img-one{
-background-image: url("/img/post1.jpg");
+background-image: url("/img/post1.jpg/");
 }
 .img-two{
-    background-image: url("/img/post2.jpg");
+    background-image: url("/img/post2.jpg/");
 
 }
 .img-three{
-    background-image: url("/img/post3.jpg");
+    background-image: url("/img/post3.jpg/");
 
 }
 
